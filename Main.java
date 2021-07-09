@@ -1,21 +1,27 @@
+import java.util.Scanner;
+
 class Main {
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
 
-    String name = "Yuto";
+    System.out.print("名前：");
+    String firstName = scanner.next();
 
-    int age = 26;
+    System.out.print("名字：");
+    String lastName = scanner.next();
 
-    double height = 179.8;
+    String name = firstName + " " + lastName;
 
-    double weight = 89.8;
+    System.out.print("年齢：");
+    int age = scanner.nextInt();
+    System.out.println("名前は" + name + "です");
+    System.out.println("年齢は" + age + "歳です");
 
-    double bmi = weight / height / height;
+    if (age >= 20) {
+      System.out.println("成年者です");
+    } else {
+      System.out.println("未成年者です");
+    }
 
-    System.out.println("名前は" + name + "です。" );
-    System.out.println("年齢は" + age + "です。");
-    System.out.println("身長は" + height + "です。");
-    System.out.println("体重は" + weight + "です。");
-    System.out.println("BMIは" + bmi + "です。");
   }
-
 }
