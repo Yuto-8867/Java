@@ -1,16 +1,20 @@
+import java.util.Scanner;
+
 class Main {
   public static void main(String[] args) {
-    Person person1 = new Person("Kate", "Jones", 27, 1.6, 50.0, "医者");
-    person1.printData();
+    Scanner scanner = new Scanner(System.in);
+    Bicycle bicycle = new Bicycle("ビアンキ", "緑");
+    System.out.println("[自転車の情報]");
+    bicycle.printData();
 
-    Person person2 = new Person("John", "Christopher", "Smith", 65, 1.75, 80.0, "教師");
-    person2.printData();
-    System.out.println("----------------------");
+    System.out.println("-------------");
+    System.out.print("走る距離を入力して下さい");
+    int bicycleData = scanner.nextInt();
+    bicycle.run(bicycleData);
 
-    person1.setJob("獣医");
-
-    System.out.println("person1の仕事を" + person1.getJob() + "に変更しました");
-
-    person1.printData();
+    System.out.println("==============");
+    Car car = new Car("フェラーリ", "赤");
+    System.out.println("[車の情報]");
+    car.printData();
   }
 }
