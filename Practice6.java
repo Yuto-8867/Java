@@ -1,6 +1,8 @@
 class Practice6 {
   public static void main(String[] args) {
-    Person person = new Person();
-    person.hello();
+    Bicycle bicycle = new Bicycle("ビアンキ");
+    System.out.println("[自転車の情報]");
+    System.out.println("名前:" + bicycle.getName());
+
   }
 }
